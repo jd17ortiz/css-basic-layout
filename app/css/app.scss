@@ -1,0 +1,265 @@
+$mobile-size: 680px;
+$mobile-small-size: 420px;
+$desktop-size: 999px;
+$main-color: #eee;
+$secondary-color: #000;
+
+body {
+  font-size: 62.5%;
+  margin: 0;
+}
+
+
+h2 {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: $secondary-color;
+}
+
+
+
+.company {
+  width: 92%;
+  margin: 0 auto;
+  padding: 1rem 1rem 0;
+
+  .title {
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+  .picture {
+    margin: 1rem 0 0;
+    img {
+      width: 100%;
+    }
+  }
+  .article {
+    margin: 3rem 0 0;
+    h2 {
+      margin: 0;
+    }
+    .article-information {
+      font-size: 1.3rem;
+      .author {
+        display: inline-block;
+      }
+    }
+    .description {
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+      text-align: left;
+    }
+    .more {
+      display: table-footer-group;
+      h3 {
+        font-size: 1.8rem;
+        margin: 0;
+      }
+      ul {
+        font-size: 1.3rem;
+        padding: 0 2rem;
+      }
+    }
+    .content-wrapper{
+      display : table-header-group;
+    }
+  }
+  header {
+    .logo {
+      display: inline-block;
+      vertical-align: middle;
+      img {
+        width: 100%;
+      }
+    }
+    .social-media {
+      display: none;
+    }
+
+    h1 {
+      display: inline-block;
+      margin: 0 1.5rem;
+      vertical-align: middle;
+    }
+    .menu-icon {
+      font-size: 2rem;
+      float: right;
+      padding: 2rem 0;
+      color: $secondary-color;
+      &:before {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .social-media {
+    margin: 0;
+    padding: 2rem 1rem;
+    list-style: none;
+    text-align: center;
+    li {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      margin: 0 1rem;
+      padding: .5rem;
+      border-radius: 50%;
+      background-color: $secondary-color;
+      a {
+        font-size: 2rem;
+        color: #fff;
+      }
+    }
+  }
+
+  .recommended {
+    display: none;
+  }
+
+  footer {
+    min-height: 70px;
+    background-color: #eee;
+    .social-media li {
+      margin: 0 2rem;
+    }
+  }
+}
+
+#menu-wrapper {
+  font-size: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: table;
+  visibility: hidden;
+  width: 0;
+  height: 100%;
+  transition: width 1s ease, background-color 1s ease;
+  text-align: center;
+  background-color: rgba( $secondary-color, .7 );
+  &:target {
+    visibility: visible;
+    width: 100%;
+    margin: 0;
+    background-color: rgba( $secondary-color, .7 );
+    nav {
+      visibility: visible;
+      transition: visibility 1s linear .5s;
+    }
+  }
+  .close {
+    font-size: 4rem;
+    position: absolute;
+    right: 0;
+    margin: 1rem 2rem;
+    color: $main-color ;
+  }
+  nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    visibility: hidden;
+    list-style: none;
+    transform: translate(-50%, -50%);
+    a {
+      display: block;
+      margin: 2rem 0;
+      color: $main-color ;
+    }
+  }
+}
+
+@media (min-width: $desktop-size) {
+  h2 {
+    font-size: 2.8rem;
+  }
+  .company {
+    .title {
+      font-size: 4.2rem;
+    }
+    header {
+      .social-media {
+        display: inline-block;
+        float: right;
+        vertical-align: middle;
+      }
+      .menu-icon {
+        display: none;
+      }
+      .close {
+        display: none;
+      }
+    }
+    .wrapper {
+      display: table;
+      width: 100%;
+      margin: 3rem 0 0;
+    }
+    .article,
+    .recommended {
+      display: table-cell;
+      vertical-align: top;
+    }
+    .article {
+      width: 75%;
+      .more,
+      .content-wrapper{
+        display : block;
+      }
+      .more{
+        float: right;
+        padding: 0 0 0 1rem;
+      }
+    }
+    .recommended {
+      width: 25%;
+      padding: 0 0 0 1rem;
+      .recommended-article:not(:first-child) {
+        margin: 2.5rem 0 0;
+      }
+      .title {
+        font-size: 2rem;
+        min-height: 76px;
+        margin: 0;
+      }
+    }
+    footer .social-media {
+      display: none;
+    }
+  }
+  #menu-wrapper {
+    position: relative;
+    visibility: visible;
+    width: 100%;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    transition: none;
+    border: 1px solid $secondary-color;
+    background-color: $main-color;
+    nav {
+      position: initial;
+      top: 0;
+      left: 0;
+      display: table;
+      visibility: visible;
+      width: 100%;
+      transform: none;
+      a {
+        display: table-cell;
+        visibility: visible;
+        margin: 0;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+@media (max-width: $mobile-small-size) {
+  .company {
+    .title{
+      font-size: 1.5rem;
+    }
+  }
+}
