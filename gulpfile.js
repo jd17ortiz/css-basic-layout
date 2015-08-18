@@ -7,7 +7,7 @@ var concat = require('gulp-concat'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
     compass = require('gulp-compass'),
-	  autoprefixer = require('gulp-autoprefixer'),
+	  autoprefixer = require('gulp-autoprefixer');
 
 
 // Sass task

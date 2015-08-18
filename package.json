@@ -20,6 +20,7 @@
     "sass"
   ],
   "scripts": {
+    "postinstall" : "gulp serve;" 
   },
   "license": "MIT"
 }

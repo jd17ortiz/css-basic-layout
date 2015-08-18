@@ -1,8 +1,7 @@
-# flickr-angular
+# CSS Basic Mockup
 
 ## Getting started
 
- - To start the program you only need to execute the command "npm start", you need to have installed node and NPM as well.
- - To unit test, execute : npm test.
+ - To start execute the command "npm install", you need to have installed node and NPM as well.
 
  Enjoy!
